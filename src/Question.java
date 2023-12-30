@@ -42,8 +42,8 @@ public class Question {
 
     public void displayQuestion(){
         System.out.println(this.questionText);
-        for (int i = 0; i < this.options.size(); i++) {
-            System.out.println(this.options.get(i));
+        for (String option : this.options) {
+            System.out.println(option);
         }
     }
 
