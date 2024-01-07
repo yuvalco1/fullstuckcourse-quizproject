@@ -1,3 +1,11 @@
+//This is the main class of the application.
+// It contains the main method which is the entry point of the application.
+// It provides a menu to the user to start a quiz, display quiz results, or exit the system.
+// It also contains two helper methods:
+//populateQuestions(): This method creates a list of Question objects and returns it.
+//generateRandomQuiz(List<Question> allquestions): This method takes a list of all questions, shuffles them, and returns a sublist of 10 questions.
+//
+
 import java.util.*;
 
 

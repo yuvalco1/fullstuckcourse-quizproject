@@ -1,3 +1,8 @@
+//This class represents a quiz taker.
+//It contains the name of the quiz taker and has a method takeQuiz(Quiz quiz).
+//This method takes a Quiz object, displays the quiz, collects the answers, calculates the score, and returns it.
+
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -20,7 +25,7 @@ public class QuizTaker {
 
     public double takeQuiz(Quiz quiz) {
 
-        System.out.println("Hello "+this.name+". Welcome to Yuval's Quiz !!!");
+        System.out.println("Hello " + this.name + ". Welcome to Yuval's Quiz !!!");
         System.out.println("You will be presented with 10 random question, please answer each question with numbers only 1-4");
 
         ArrayList<Integer> playerAnswers = new ArrayList<>();
@@ -36,7 +41,7 @@ public class QuizTaker {
             playerAnswers.add(answer);
         }
         //scanner.close();
-        System.out.println("Your score is: "+quiz.scoreQuiz(playerAnswers)+"%");
+        System.out.println("Your score is: " + quiz.scoreQuiz(playerAnswers) + "%");
         return quiz.scoreQuiz(playerAnswers);
     }
 

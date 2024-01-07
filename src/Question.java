@@ -1,3 +1,8 @@
+//This class represents a single question in the quiz.
+//It contains the question text, a list of options, and the index of the correct option. It has two main methods:
+//displayQuestion(): This method displays the question and its options.
+//isCorrectAnswer(int answerIndex): This method takes an answer index, compares it with the correct answer index, and returns true if they match, false otherwise.
+
 import java.util.List;
 
 public class Question {
@@ -40,14 +45,14 @@ public class Question {
         this.correctOptionIndex = correctOptionIndex;
     }
 
-    public void displayQuestion(){
+    public void displayQuestion() {
         System.out.println(this.questionText);
         for (String option : this.options) {
             System.out.println(option);
         }
     }
 
-    public boolean isCorrectAnswer(int answerIndex){
+    public boolean isCorrectAnswer(int answerIndex) {
         return answerIndex == this.correctOptionIndex;
     }
 
