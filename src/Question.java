@@ -5,46 +5,44 @@
 
 import java.util.List;
 
+/**
+ * This class represents a question in a quiz.
+ */
 public class Question {
 
+    /**
+     * The text of the question.
+     */
     private String questionText;
 
+    /**
+     * The list of answer options for the question.
+     */
     private List<String> options;
 
+    /**
+     * The index of the correct answer option in the options list.
+     */
     private int correctOptionIndex;
 
-
+    /**
+     * Constructor to initialize the question data.
+     *
+     * @param questionText The text of the question
+     * @param options The list of answer options
+     * @param correctOptionIndex The index of the correct option
+     */
     public Question(String questionText, List<String> options, int correctOptionIndex) {
         this.questionText = questionText;
         this.options = options;
         this.correctOptionIndex = correctOptionIndex;
     }
 
+    // Getters and setters for the properties
 
-    public String getQuestionText() {
-        return questionText;
-    }
-
-    public void setQuestionText(String questionText) {
-        this.questionText = questionText;
-    }
-
-    public List<String> getOptions() {
-        return options;
-    }
-
-    public void setOptions(List<String> options) {
-        this.options = options;
-    }
-
-    public int getCorrectOptionIndex() {
-        return correctOptionIndex;
-    }
-
-    public void setCorrectOptionIndex(int correctOptionIndex) {
-        this.correctOptionIndex = correctOptionIndex;
-    }
-
+    /**
+     * Displays the question text and answer options.
+     */
     public void displayQuestion() {
         System.out.println(this.questionText);
         for (String option : this.options) {
@@ -52,8 +50,13 @@ public class Question {
         }
     }
 
+    /**
+     * Checks if the given answer index matches the correct answer.
+     *
+     * @param answerIndex The given answer index
+     * @return True if the answer is correct, false otherwise
+     */
     public boolean isCorrectAnswer(int answerIndex) {
         return answerIndex == this.correctOptionIndex;
     }
-
 }
