@@ -4,7 +4,6 @@
 
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -15,7 +14,7 @@ public class QuizTaker {
     /**
      * The name of the quiz taker.
      */
-    private String name;
+    private final String name;
 
     /**
      * Constructor to initialize the quiz taker's name.
@@ -30,7 +29,7 @@ public class QuizTaker {
 
     /**
      * Administers the given quiz to this quiz taker.
-     *
+     * <p>
      * Displays welcome message, prompts for answers to each question,
      * scores the quiz based on the answers, and prints the final result.
      *

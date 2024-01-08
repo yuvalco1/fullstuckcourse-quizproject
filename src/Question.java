@@ -13,23 +13,23 @@ public class Question {
     /**
      * The text of the question.
      */
-    private String questionText;
+    private final String questionText;
 
     /**
      * The list of answer options for the question.
      */
-    private List<String> options;
+    private final List<String> options;
 
     /**
      * The index of the correct answer option in the options list.
      */
-    private int correctOptionIndex;
+    private final int correctOptionIndex;
 
     /**
      * Constructor to initialize the question data.
      *
-     * @param questionText The text of the question
-     * @param options The list of answer options
+     * @param questionText       The text of the question
+     * @param options            The list of answer options
      * @param correctOptionIndex The index of the correct option
      */
     public Question(String questionText, List<String> options, int correctOptionIndex) {
