@@ -21,14 +21,13 @@ public class Main {
 
         // Scanner to get user input
         Scanner scanner = new Scanner(System.in);
-
+        scanner.useDelimiter("\\n");
         // Map to store quiz taker names and scores
         HashMap<String, Double> quiztakerslist = new HashMap<>();
 
         int option = 0;
 
         while (option != 3) {
-
             // Print menu options
             System.out.println("Welcome to Yuval's Quiz, Please choose an option: ");
             System.out.println("1 - Start a quiz by entering their name. ; 2 - Display quiz results for all players. ; 3 - Exit the quiz system");
