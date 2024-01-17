@@ -6,8 +6,10 @@
 //generateRandomQuiz(List<Question> allquestions): This method takes a list of all questions, shuffles them, and returns a sublist of 10 questions.
 //
 
+import java.io.*;
 import java.util.*;
-
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 /**
  * Main class that runs the quiz application.
@@ -17,13 +19,15 @@ public class Main {
     /**
      * Main method that runs the quiz application.
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         // Scanner to get user input
         Scanner scanner = new Scanner(System.in);
         scanner.useDelimiter("\\n");
         // Map to store quiz taker names and scores
-        HashMap<String, Double> quiztakerslist = new HashMap<>();
+        HashMap<String, Double> quiztakerslist;
+        // Read scores from JSON file
+        quiztakerslist = new GsonHelper().readJSON();
 
         int option = 0;
 
@@ -55,6 +59,19 @@ public class Main {
 
                     // Add score to map
                     quiztakerslist.put(name, score);
+                    // Write scores to JSON file
+                    GsonHelper tester = new GsonHelper();
+                    try {
+                        tester.writeJSON(quiztakerslist);
+
+                    }
+                    catch(FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                    catch(IOException e) {
+                        e.printStackTrace();
+                    }
+
 
                     break;
 
